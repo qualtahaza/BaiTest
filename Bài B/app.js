@@ -1,20 +1,17 @@
 async function api() {
     let resStoryID = await fetch("https://opentdb.com/api.php?amount=5&category=21&difficulty=easy&type=multiple")
     let story = await resStoryID.json();
-
-
     let data = [];
     data.push(story);
     let listContent = document.getElementById("container")
     let getData = Object.values(data[0].results);
-    console.log(getData);
-    console.log(getData[1].incorrect_answers);
-    let getData1 = Object.values(getData[1].incorrect_answers);
-    console.log(getData1[0]);
+
+    console.log(getData[3]);
+
     let html = ``;
 
     for (i = 0; i < getData.length; i++) {
-
+        let getData1 = Object.values(getData[i].incorrect_answers);
         html = html + `<div class="element">
     <div class="question">
         <h3>${getData[i].question}</h3>
