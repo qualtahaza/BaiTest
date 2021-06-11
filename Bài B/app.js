@@ -8,10 +8,13 @@ async function api() {
     let listContent = document.getElementById("container")
     let getData = Object.values(data[0].results);
     console.log(getData);
-
+    console.log(getData[1].incorrect_answers);
+    let getData1 = Object.values(getData[1].incorrect_answers);
+    console.log(getData1[0]);
     let html = ``;
 
     for (i = 0; i < getData.length; i++) {
+
         html = html + `<div class="element">
     <div class="question">
         <h3>${getData[i].question}</h3>
@@ -19,9 +22,9 @@ async function api() {
     </div>
     <div class="answer hideText">
         
-        <p>${getData[i].incorrect_answers}</p>
-        <p>${getData[i].incorrect_answers}</p>
-        <p>${getData[i].incorrect_answers}</p>
+        <p>${getData1[1]}</p>
+        <p>${getData1[2]}</p>
+        <p>${getData1[0]}</p>
         <p>${getData[i].correct_answer}</p>
     </div>
     </div>
