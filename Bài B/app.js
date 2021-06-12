@@ -30,22 +30,22 @@
     <div class="answer hideText">
     <div class="form-check">
     <label class="form-check-label">
-      <input type="radio" class="form-check-input" name="optradio"> ${getData2[1]}
+      <input type="radio" class="rad"class="form-check-input" name="optradio" values="${getData2[1]}"> ${getData2[1]}
     </label>
   </div>
   <div class="form-check">
     <label class="form-check-label">
-      <input type="radio" class="form-check-input" name="optradio"> ${getData2[2]}
+      <input type="radio" class="rad" class="form-check-input" name="optradio" values="${getData2[2]}"> ${getData2[2]}
     </label>
   </div>
   <div class="form-check">
     <label class="form-check-label">
-      <input type="radio" class="form-check-input" name="optradio"> ${getData2[0]}
+      <input type="radio" class="rad" class="form-check-input" name="optradio" values="${getData2[0]}"> ${getData2[0]}
     </label>
   </div>
   <div class="form-check">
     <label class="form-check-label">
-      <input type="radio" class="form-check-input" name="optradio"> ${getData2[3]}
+      <input type="radio" class="rad" class="form-check-input" name="optradio" values="${getData2[3]}"> ${getData2[3]}
     </label>
   </div>
   <br>
@@ -54,10 +54,14 @@
         
     
     </div>
-    `
+    `;
+         listContent.innerHTML = html;
+
+
+
+
      }
 
-     listContent.innerHTML = html;
 
      const elements = document.querySelectorAll('.element');
      elements.forEach(element => {
